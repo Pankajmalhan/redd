@@ -1,8 +1,9 @@
 
 
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import { Platform, StyleSheet, Text, View ,NativeModules} from 'react-native';
 import StorageManager from "../../utils/StorageManager"
+import DeviceInfo from 'react-native-device-info';
 
 
 export default class AuthScreen extends Component {
@@ -11,6 +12,7 @@ export default class AuthScreen extends Component {
   }
 
   async componentWillMount() {
+   alert(DeviceInfo.getDeviceLocale());
     try {
       var userToken = await StorageManager.getItem('UserToken');
       if (userToken) {
@@ -23,6 +25,7 @@ export default class AuthScreen extends Component {
       this.props.navigation.navigate('LogIn');
     }
   }
+
   render() {
     return null;
   }
