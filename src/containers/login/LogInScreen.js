@@ -1,26 +1,16 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
+
 
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
-import Child from './Child';
-import { Provider } from "mobx-react";
-import Store from './src/store/index';
-import AppNavigator from "./src/utils/Router";
 
 
-export default class App extends Component<Props> {
+
+export default class LogInScreen extends Component {
   render() {
     return (
-      <Provider {...Store}>
-        <AppNavigator />
-      </Provider>
-
+      <View>
+          <Text>This is LogIn Screen</Text>
+      </View>
     );
   }
 }

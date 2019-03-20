@@ -1,6 +1,6 @@
 import { AsyncStorage } from 'react-native';
 
-class StorageManager {
+export default class StorageManager {
     static setItem(key, value) {
         return AsyncStorage.setItem(key, value);
     }
