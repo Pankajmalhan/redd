@@ -12,7 +12,6 @@ export default class AuthScreen extends Component {
   }
 
   async componentWillMount() {
-   alert(DeviceInfo.getDeviceLocale());
     try {
       var userToken = await StorageManager.getItem('UserToken');
       if (userToken) {

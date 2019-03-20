@@ -12,7 +12,7 @@ import Child from './Child';
 import { Provider } from "mobx-react";
 import Store from './src/store/index';
 import AppNavigator from "./src/utils/Router";
-
+console.disableYellowBox = true;
 
 export default class App extends Component<Props> {
   render() {
